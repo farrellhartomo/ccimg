@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		Image_Processor reader = new Image_Processor();
-		reader.setImage();
+		reader.setImageTest();
 		reader.getImageAtr();
 	}
 

@@ -19,7 +19,7 @@ public class Image_Processor {
 		
 		
 		public Image_Processor() {
-			
+			//empty constructor
 		}
 		
 		//reading image
@@ -30,7 +30,7 @@ public class Image_Processor {
 			} catch (IOException e) { System.out.print(e);}
 		}
 		
-		public void setImage() throws IOException{
+		public void setImageTest() throws IOException{
 			URI = "/images/image3.jpg";
 			this.image = ImageIO.read(getClass().getResource(URI));
 			h1 = image.getHeight();
@@ -38,11 +38,15 @@ public class Image_Processor {
 			pixels = new int[h1][w1];
 		}
 		
-		public void getImage(BufferedImage image) {
-//			if (image != null) {
-//				this.file = 
-//			}
-//			return file;
+		public BufferedImage getImage(BufferedImage image) {
+			if (image != null) {
+				this.image = image;
+			}
+			return this.image;
+		}
+		
+		public void setImage(BufferedImage image) {
+			this.image = image;
 		}
 		
 		public void getImageAtr(){
@@ -50,4 +54,11 @@ public class Image_Processor {
 			System.out.print("lebar:" +w1);
 		}
 		
+		public void setThreshold() {
+			//set threshold for image before chain-coded
+		}
+		
+		public void setBorder(int width, int height) {
+			//receive pixels for border detection
+		}
 }
